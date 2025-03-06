@@ -26,8 +26,7 @@ function pickCard(){
     }
     let kep1 = document.createElement("img")
     kep1.src = "https://deckofcardsapi.com/static/img/back.png"
-    let kep2 = document.createElement("img")
-    kep2.src = "https://deckofcardsapi.com/static/img/back.png"
+    kep1.src = hatlap
 
     pickedCardsEl.appendChild(kep1)
     pickedCardsEl.appendChild(kep2)
@@ -36,7 +35,5 @@ function pickCard(){
     .then(response => response.json())
     .then(jsonRes => {
         kep1.src = jsonRes.cards[0].image
-        kep2.src = jsonRes.cards[1].image
-        
     })
 }

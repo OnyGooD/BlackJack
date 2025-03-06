@@ -19,7 +19,18 @@ function getNewDeck(){
         })
 }
 
+let isFirst = true
 function pickCard(){
+    if(isFirst){
+        pickOneCard()
+        pickOneCard()
+        isFirst = false
+    }else{
+        pickOneCard()
+    }
+}
+
+function pickOneCard(){
     if(!deckId){
         console.error("Nincs paklink!")
         return

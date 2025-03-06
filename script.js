@@ -12,6 +12,8 @@ function getNewDeck(){
 
 function pickCards(){
     if(!deckId){
-        throw new Error("No deck id")
+        console.error("No deck id")
+        return
     }
+    fetch(BASE_URL + `/${deckId}/draw/?count=2`)
 }
